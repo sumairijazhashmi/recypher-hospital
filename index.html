@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- Site Metas -->
+        <title>Recypher Hospital - We Care</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/colors.css">
+        <link rel="stylesheet" href="css/versions.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <!-- loading page -->
+        <div id="preloader">
+            <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
+        </div>
+        
+        <!-- tutorial -->
+        <div id="tutorial" class="tutorial">
+            <div class="tutorial-content">
+                <span class="close-button">&times;</span>
+                <h2>Welcome to the Hospital Website! Before you begin, remember your task!</h2>
+                <p>The employees at the Recypher Hospital have not obtained security awareness training sessions. Hence, their lack of tech knowledge means they can fall prey to phishing attacks. Attackers have identified this as a golden opportunity.
+                The hospital website contains traces to employee’s social media accounts. The posts they make reveal a lot about their personalities and daily habits..</p>
+                <p>Task: Your role is to scan this website to get any relevant information about the employees, and use your knowledge of human weaknesses to understand how you can exploit an employee. Knowing what weakness to target would help you draft convincing phishing emails in the next phase.</p>
+                <p>Once you have gathered enough information from this website, go back to the previous tab to write your phishing email. Good luck! :)</p>
+                <p>If you are confused, click on the Hints to complete the challenge!</p>
+                <button class="next-button" onclick="finishTutorial()">Proceed!</button>
+            </div>
+        </div>
+
+        <!-- hints button -->
+        <div class="hints-container">
+            <button class="hints-button" onclick="toggleHints()">Hints</button>
+            <div id="hints-menu" class="hints-menu">
+                <h2>Hints</h2>
+                <p class="hint" id="hint1">Hint 1: Scroll to the "Doctors" section to view all the employees.</p>
+                <p class="hint" id="hint2">Hint 2: Analyze a doctor's profile in the "Doctors" section. </p>
+                <p class="hint" id="hint3">Hint 3: You can see a doctor's name, email, and other general information in the "Doctors" section.</p>
+                <p class="hint" id="hint4">Hint 4: You can also click on a doctor's social media account to get any relevant information about the employee.</p>
+                <p class="hint" id="hint5">Hint 5: Remember your task! You want to extract information about a doctor and use your knowledge of human weaknesses so that you can write a convincing phishing email.</p>
+                <button class="next-hint-button" onclick="nextHint()">Next Hint</button>
+            </div>
+        </div>
+
+        <!-- header -->
+        <div id="header">
+          <!-- info like phone num and stuff -->
+          <div class="header-top wow fadeIn">
+             <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                <div class="right-header">
+                   <div class="header-info">
+                      <div class="info-inner">
+                         <span class="icontop"><img src="images/phone-icon.png" alt="#"></span>
+                         <span class="iconcont"><a href="tel:800 123 456">800 123 456</a></span>	
+                      </div>
+                      <div class="info-inner">
+                         <span class="icontop"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                         <span class="iconcont"><a data-scroll href="mailto:info@yoursite.com">info@Recypher.com</a></span>	
+                      </div>
+                      <div class="info-inner">
+                         <span class="icontop"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                         <span class="iconcont"><a data-scroll href="#">Daily: 7:00am - 8:00pm</a></span>	
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+  
+          <!-- navigation menu -->
+         
+          <div class="header-bottom wow fadeIn">
+             <div class="container">
+                <nav class="main-menu">
+                   <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                   </div>
+                   <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                         <li><a class="active" data-scroll-nav="home" href="#index.html">Home</a></li>
+                         <li><a data-scroll-nav="about" href="#about">About us</a></li>
+                         <li><a data-scroll-nav="service" href="#service">Services</a></li>
+                         <li><a data-scroll-nav="doctors" href="#doctors">Doctors</a></li>
+                         <li><a data-scroll-nav="testimonials" href="#testimonials">Testimonials</a></li>
+                         <li><a data-scroll-nav="getintouch" href="#contact">Contact</a></li>
+                      </ul>
+                   </div>
+                </nav>
+               <!-- search bar -->
+                <div class="serch-bar">
+                   <div id="custom-search-input">
+                      <div class="input-group col-md-12">
+                         <input type="text" class="form-control input-lg" placeholder="Search" />
+                         <span class="input-group-btn">
+                         <button class="btn btn-info btn-lg" type="button">
+                         <i class="fa fa-search" aria-hidden="true"></i>
+                         </button>
+                         </span>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div> 
+       
+          <!-- animation + main jumbo thing-->
+      <div data-scroll-id="home" id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('images/slider-bg.png');">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <div class="text-contant">
+                <h2>
+                  <span class="center"><span class="icon"><img src="images/icon-logo.png" alt="#" /></span></span>
+                  <a id="typewriter" href="" class="typewrite" data-period="2000" data-type='["Welcome to Recypher Hospital"]'>
+                    <span class="wrap"></span>
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+       <!-- time table of the hospital, 3 boxes in grid in the home page -->
+       <div id="time-table" class="time-table-section">
+        <div class="container">
+           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="row">
+                 <div class="service-time one" style="background:#2895f1;">
+                    <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+                    <h3>Emergency Case</h3>
+                    <p>Our emergency department aims to provide you with high quality care as quickly and efficiently as possible</p>
+                 </div>
+              </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="row">
+                 <div class="service-time middle" style="background:#0071d1;">
+                    <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 
+                    <h3>Working Hours</h3>
+                    <div class="time-table-section">
+                       <ul>
+                          <li><span class="left">Monday - Friday</span><span class="right">8.00 – 18.00</span></li>
+                          <li><span class="left">Saturday</span><span class="right">8.00 – 16.00</span></li>
+                          <li><span class="left">Sunday</span><span class="right">8.00 – 13.00</span></li>
+                       </ul>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="row">
+                 <div class="service-time three" style="background:#0060b1;">
+                    <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+                    <h3>Clinic Timetable</h3>
+                    <p>Download our current Clinic Timetables above to view full details of our 'walk in' and 'appointment only' clinics conveniently held in the mornings, afternoons and evenings on either a weekly, fortnightly or monthly basis</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+          
+
+       <!-- about us -->
+       <div data-scroll-id="about" id="about" class="section wow fadeIn">
+        <div class="container">
+           <div class="heading">
+              <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+              <h2>The Specialist Clinic</h2>
+           </div>
+           <!-- end title -->
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="message-box">
+                    <h4>What We Do</h4>
+                    <h2>Clinic Service</h2>
+                    <p class="lead">Recypher Hospital has been delivering health services with focus on the local needs and affordability. Our core value has been to look after the rights of patients that endorse the health facility. We have been striving each day for improving our efforts and providing value addition to our patients.  </p>
+                    <a href="#service" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
+                 </div>
+                 <!-- end messagebox -->
+              </div>
+              <!-- end col -->
+              <div class="col-md-6">
+                 <div class="post-media wow fadeIn">
+                    <img src="images/about_03.jpg" alt="" class="img-responsive">
+                    <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
+                 </div>
+                 <!-- end media -->
+              </div>
+              <!-- end col -->
+           </div>
+           <!-- end row -->
+           <hr class="hr1">
+           <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                 <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                       <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                       <img src="images/clinic_01.jpg" alt="" class="img-responsive">
+                    </div>
+                    <h3>Digital Control Center</h3>
+                 </div>
+                 <!-- end service -->
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                 <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                       <a href="images/clinic_02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                       <img src="images/clinic_02.jpg" alt="" class="img-responsive">
+                    </div>
+                    <h3>Hygienic Operating Room</h3>
+                 </div>
+                 <!-- end service -->
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                 <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                       <a href="images/clinic_03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                       <img src="images/clinic_03.jpg" alt="" class="img-responsive">
+                    </div>
+                    <h3>Specialist Physicians</h3>
+                 </div>
+                 <!-- end service -->
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                 <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                       <a href="images/clinic_01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                       <img src="images/clinic_01.jpg" alt="" class="img-responsive">
+                    </div>
+                    <h3>Digital Control Center</h3>
+                 </div>
+                 <!-- end service -->
+              </div>
+           </div>
+           <!-- end row -->
+        </div>
+        <!-- end container -->
+     </div>
+
+
+  <!-- services / book appointment -->
+  <div data-scroll-id="service" id="service" class="services wow fadeIn">
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+             <div class="inner-services">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                   <div class="serv">
+                      <span class="icon-service"><img src="images/service-icon1.png" alt="#" /></span>
+                      <h4>PREMIUM FACILITIES</h4>
+                      
+                   </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                   <div class="serv">
+                      <span class="icon-service"><img src="images/service-icon2.png" alt="#" /></span>
+                      <h4>LARGE LABORATORY</h4>
+                      
+                   </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                   <div class="serv">
+                      <span class="icon-service"><img src="images/service-icon3.png" alt="#" /></span>
+                      <h4>DETAILED SPECIALIST</h4>
+                      
+                   </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                   <div class="serv">
+                      <span class="icon-service"><img src="images/service-icon4.png" alt="#" /></span>
+                      <h4>CHILDREN CARE CENTER</h4>
+                      
+                   </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                   <div class="serv">
+                      <span class="icon-service"><img src="images/service-icon5.png" alt="#" /></span>
+                      <h4>FINE INFRASTRUCTURE</h4>
+
+                   </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                   <div class="serv">
+                      <span class="icon-service"><img src="images/service-icon6.png" alt="#" /></span>
+                      <h4>ANYTIME BLOOD BANK</h4>
+                      
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+             <div class="appointment-form">
+                <h3><span>+</span> Book Appointment</h3>
+                <div class="form">
+                   <form action="index.html">
+                      <fieldset>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                               <div class="form-group">
+                                  <input type="text" id="name" placeholder="Your Name"  />
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                               <div class="form-group">
+                                  <input type="email" placeholder="Email Address" id="email" />
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                            <div class="row">
+                               <div class="form-group">
+                                  <select class="form-control">
+                                     <option>Day</option>
+                                     <option>Sunday</option>
+                                     <option>Monday</option>
+                                  </select>
+                               </div>
+                               <div class="form-group">
+                                  <select class="form-control">
+                                     <option>Time</option>
+                                     <option>AM</option>
+                                     <option>PM</option>
+                                  </select>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                               <div class="form-group">
+                                  <select class="form-control">
+                                     <option>Doctor Name</option>
+                                     <option>Mr.XYZ</option>
+                                     <option>Mr.ABC</option>
+                                  </select>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                               <div class="form-group">
+                                  <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                               <div class="form-group">
+                                  <div class="center"><button type="submit">Submit</button></div>
+                               </div>
+                            </div>
+                         </div>
+                      </fieldset>
+                   </form>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+
+ <div id="doctors" class="doctors wow fadeIn" data-scroll-id="doctors">
+  <div class="container">
+
+   <div class="heading">
+        <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+        <h2>The Specialist Clinic</h2>
+     </div>
+
+     <div class="row dev-list text-center">
+      <!-- 1 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+        <div class="widget clearfix">
+            <img src="images/sarah_wilson.jpg" alt="" class="img-responsive img-rounded">
+            <div class="widget-title">
+                <h3>Dr. Sarah Wilson</h3>
+                <small>Surgeon</small>
+            </div>
+            <!-- end title -->
+            <span class="left"><b>Qualification:</b> MD</span><br>
+            <span class="left"><b>Room:</b> 301</span><br>
+            <span class="left"><b>Email:</b> sarah.wilson@recypher-hospital.com</span><br>
+
+            <div class="footer-social">
+                  <button id="fb-1" class="btn grd1"><i class="fa fa-facebook"></i></button>
+                  <button id="twitter-1" class="btn grd1"><i class="fa fa-twitter"></i></button>
+                  <button id="linkedin-1" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                  <button id="show-button-1" class="btn grd1"><i class="fa fa-info"></i></button>
+                  <div id="linkedin-container-1" class="linkedin-container">
+                     <div id="linkedin-content-1" class="linkedin-content">
+                        <div class="linkedin-post">
+                           <button id="linkedin-close" class="linkedin-close-1">&times;</button>
+                           <div class="post-header">
+                             <img src="images/sarah_wilson.jpg" alt="Profile Picture">
+                             <div class="user-info">
+                               <h2>Sarah Wilson</h2>
+                               <p>2 hrs &middot; <i class="fas fa-globe"></i></p>
+                             </div>
+                             <div class="post-options">
+                               <i class="fa fa-ellipsis-h"></i>
+                             </div>
+                           </div>
+                           <div class="post-content">
+                             <p>Attended a surgical conference in New York City last week, learned a lot about the latest techniques in minimally invasive surgery.</p>
+                           </div>
+                           <div class="post-actions">
+                             <div class="reaction-count">
+                               <i class="fa fa-thumbs-up"></i>
+                               <span>43</span>
+                             </div>
+                             <div class="comment-count">
+                               <i class="fa fa-comment"></i>
+                               <span>12</span>
+                             </div>
+                             <div class="share-action">
+                               <i class="fas fa-share"></i>
+                               <span>Share</span>
+                             </div>
+                           </div>
+                         </div>
+                         
+                     </div>
+                  </div>
+                  <div id="twitter-container-1" class="twitter-container">
+                     <div id="twitter-content-1" class="twitter-content">
+                        <button id="twitter-close" class="twitter-close-1">&times;</button>
+                        <p>Sarah Wilson is not on Twitter</p>
+                     </div>
+                  </div>
+                <div id="fb-container-1" class="fb-container">
+                  <div id="fb-content-1" class="fb-content">
+                     <div class="post">
+                      <button id="fb-close" class="fb-close-1">&times;</button>
+                        <div class="user-info">
+                          <img src="images/sarah_wilson.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Sarah Wilson</h2>
+                            <p>2 hrs &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Hey everyone! I just wanted to share that I recently got back from an incredible family vacation to Hawaii, and I am feeling so refreshed and rejuvenated!</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="like-action">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="num-likes">25</span>
+                            <span>Like</span>
+                          </div>
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span class="num-comments">12</span>
+                            <span>Comment</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                 <div id="popup-container-1" class="popup-container-1">
+                   <div class="popup-content-1" id="popup-content-1">
+                     <div class="card-1">
+                      <button id="close-button-1" class="close-button-1">&times;</button>
+                       <h4>About Sarah Wilson:</h4>
+                       <ul id="popup-list">
+                         <li>Birth date: June 17, 1985</li>
+                         <li>Private Email: wilson.sarah85@gmail.com</li>
+                         <li>Loves to travel</li>
+                         <li>Is a happy mother of two</li>
+                       </ul>
+                     </div>
+                   </div>
+                 </div>
+            </div>
+        </div><!--widget -->
+         </div><!-- end col -->
+
+
+                      <!-- 7 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/emily_wong.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Emily Wong</h3>
+                 <small>Orthodontist</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> DDS</span><br>
+             <span class="left"><b>Room:</b> 203</span><br>
+             <span class="left"><b>Email:</b> emily.wong@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-3" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-3" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-3" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-7" class="btn grd1"><i class="fa fa-info"></i></button>
+                 <div id="linkedin-container-3" class="linkedin-container">
+                  <div id="linkedin-content-3" class="linkedin-content">
+                     <div class="linkedin-post">
+                        <button id="linkedin-close" class="linkedin-close-3">&times;</button>
+                        <div class="post-header">
+                          <img src="images/emily_wong.jpg" alt="Profile Picture">
+                          <div class="user-info">
+                            <h2>Emily Wong</h2>
+                            <p>3 hrs &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Our practice just added a new state-of-the-art 3D scanner that makes orthodontic treatment even more precise and efficient.</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="reaction-count">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span>51</span>
+                          </div>
+                          <div class="comment-count">
+                            <i class="fa fa-comment"></i>
+                            <span>17</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+               </div>
+               <div id="twitter-container-3" class="twitter-container">
+                  <div id="twitter-content-3" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-3">&times;</button>
+                     <div class="tweet">
+                        <div class="user-info">
+                          <img src="images/emily_wong.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Emily Wong</h2>
+                            <p>@emily_wong &middot; 3h</p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Photography has always been my go-to creative outlet, and it's amazing to see how much it's evolved over the years. From film to digital, and now to smartphone cameras, the possibilities are endless. I love capturing life's little moments and preserving memories through my lens. #photography #personaljourney</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span>5</span>
+                          </div>
+                          <div class="retweet-action">
+                            <i class="fa fa-retweet"></i>
+                            <span>1</span>
+                          </div>
+                          <div class="like-action">
+                            <i class="fa fa-heart"></i>
+                            <span>21</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+               </div>
+             <div id="fb-container-3" class="fb-container">
+               <div id="fb-content-3" class="fb-content">
+                  <div class="post">
+                   <button id="fb-close" class="fb-close-3">&times;</button>
+                     <div class="user-info">
+                       <img src="images/emily_wong.jpg" alt="Profile Picture">
+                       <div class="user-name-and-time">
+                         <h2>Emily Wong</h2>
+                         <p>5 hrs &middot; <i class="fas fa-globe"></i></p>
+                       </div>
+                       <div class="post-options">
+                         <i class="fas fa-ellipsis-h"></i>
+                       </div>
+                     </div>
+                     <div class="post-content">
+                       <p>Feeling inspired to get creative and start a new hobby - sculpting! There's something so fascinating about the way you can mold and shape materials into a beautiful piece of art. I'm looking for some recommendations on where to learn advanced techniques of sculpting. Any suggestions?</p>
+                     </div>
+                     <div class="post-actions">
+                       <div class="like-action">
+                         <i class="fa fa-thumbs-up"></i>
+                         <span class="num-likes">9</span>
+                         <span>Like</span>
+                       </div>
+                       <div class="comment-action">
+                         <i class="fa fa-comment"></i>
+                         <span class="num-comments">12</span>
+                         <span>Comment</span>
+                       </div>
+                       <div class="share-action">
+                         <i class="fa fa-share"></i>
+                         <span>Share</span>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+             </div>
+                  <div id="popup-container-7" class="popup-container-7">
+                    <div class="popup-content-7" id="popup-content-7">
+                      <div class="card-7">
+                       <button id="close-button-7" class="close-button-7">&times;</button>
+                        <h4>About Emily Wong:</h4>
+                        <ul id="popup-list">
+                          <li>Date of birth: May 29, 1992</li>
+                          <li>Creative</li>
+                          <li>Fan of art</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+      </div><!-- end col -->
+
+
+          <!-- 3 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/susan_lee.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Susan Lee</h3>
+                 <small>Pediatrician</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> MD</span><br>
+             <span class="left"><b>Room:</b> 204</span><br>
+             <span class="left"><b>Email:</b> susan.lee@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-4" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-4" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-4" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-3" class="btn grd1"><i class="fa fa-info"></i></button>
+                 <div id="linkedin-container-4" class="linkedin-container">
+                  <div id="linkedin-content-4" class="linkedin-content">
+                     <button id="linkedin-close" class="linkedin-close-4">&times;</button>
+                     <p>Susan Lee is not on LinkedIn</p>
+                  </div>
+               </div>
+               <div id="twitter-container-4" class="twitter-container">
+                  <div id="twitter-content-4" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-4">&times;</button>
+                     <div class="tweet">
+                        <div class="user-info">
+                          <img src="images/susan_lee.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Susan Lee</h2>
+                            <p>@susan_lee &middot; 6h</p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Exciting news! Honored and proud to be part of a team that was awarded a grant to develop a new pediatric cancer treatment. Our dedication to finding better treatments for our young patients never wavers. Let's beat childhood cancer together! #pediatriccancer #research #teamwork</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span>7</span>
+                          </div>
+                          <div class="retweet-action">
+                            <i class="fa fa-retweet"></i>
+                            <span>3</span>
+                          </div>
+                          <div class="like-action">
+                            <i class="fa fa-heart"></i>
+                            <span>25</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+               </div>
+             <div id="fb-container-4" class="fb-container">
+               <div id="fb-content-4" class="fb-content">
+                  <div class="post">
+                   <button id="fb-close" class="fb-close-4">&times;</button>
+                     <div class="user-info">
+                       <img src="images/susan_lee.jpg" alt="Profile Picture">
+                       <div class="user-name-and-time">
+                         <h2>Susan Lee</h2>
+                         <p>3 hrs &middot; <i class="fas fa-globe"></i></p>
+                       </div>
+                       <div class="post-options">
+                         <i class="fas fa-ellipsis-h"></i>
+                       </div>
+                     </div>
+                     <div class="post-content">
+                       <p>Trying to pick out the perfect wedding dress for my upcoming nuptials, so excited to marry the love of my life!</p>
+                     </div>
+                     <div class="post-actions">
+                       <div class="like-action">
+                         <i class="fa fa-thumbs-up"></i>
+                         <span class="num-likes">9</span>
+                         <span>Like</span>
+                       </div>
+                       <div class="comment-action">
+                         <i class="fa fa-comment"></i>
+                         <span class="num-comments">12</span>
+                         <span>Comment</span>
+                       </div>
+                       <div class="share-action">
+                         <i class="fa fa-share"></i>
+                         <span>Share</span>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+             </div>
+                  <div id="popup-container-3" class="popup-container-3">
+                    <div class="popup-content-3" id="popup-content-3">
+                      <div class="card-3">
+                       <button id="close-button-3" class="close-button-3">&times;</button>
+                        <h4>About Susan Lee:</h4>
+                        <ul id="popup-list">
+                          <li>Newly engaged</li>
+                          <li>Volunteering at animal shelter</li>
+                          <li>Hard working</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+               <!-- 4 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/james_chenn.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. James Chen</h3>
+                 <small>Dentist</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> DDS</span><br>
+             <span class="left"><b>Room:</b> 101</span><br>
+             <span class="left"><b>Email:</b> james.chen@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-5" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-5" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-5" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-4" class="btn grd1"><i class="fa fa-info"></i></button>
+                 <div id="linkedin-container-5" class="linkedin-container">
+                  <div id="linkedin-content-5" class="linkedin-content">
+                     <div class="linkedin-post">
+                        <button id="linkedin-close" class="linkedin-close-5">&times;</button>
+                        <div class="post-header">
+                          <img src="images/james_chenn.jpg" alt="Profile Picture">
+                          <div class="user-info">
+                            <h2>James Chen</h2>
+                            <p>6 hrs &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Excited to start using a new dental implant technology that promises better outcomes for our patients.</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="reaction-count">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span>31</span>
+                          </div>
+                          <div class="comment-count">
+                            <i class="fa fa-comment"></i>
+                            <span>9</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+               </div>
+               <div id="twitter-container-5" class="twitter-container">
+                  <div id="twitter-content-5" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-5">&times;</button>
+                     <div class="tweet">
+                        <div class="user-info">
+                          <img src="images/james_chenn.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>James Chen</h2>
+                            <p>@james_chenn &middot; 6h</p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>New York's housing crisis continues to worsen, with skyrocketing rents and limited affordable options. It's time for government and private sector to come together to address this pressing issue and provide safe, decent, and affordable housing for all New Yorkers. #housingcrisis #NewYork</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span>3</span>
+                          </div>
+                          <div class="retweet-action">
+                            <i class="fa fa-retweet"></i>
+                            <span>1</span>
+                          </div>
+                          <div class="like-action">
+                            <i class="fa fa-heart"></i>
+                            <span>19</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+               </div>
+             <div id="fb-container-5" class="fb-container">
+               <div id="fb-content-5" class="fb-content">
+                     <button id="fb-close" class="fb-close-5">&times;</button>
+                     <p>James Chen is not on Facebook</p>
+               </div>
+             </div>
+                  <div id="popup-container-4" class="popup-container-4">
+                    <div class="popup-content-4" id="popup-content-4">
+                      <div class="card-4">
+                       <button id="close-button-4" class="close-button-4">&times;</button>
+                        <h4>About James Chen:</h4>
+                        <ul id="popup-list">
+                          <li>Birth date: April 21, 1990</li>
+                          <li>Looking for a new flat</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+
+         <!-- 5 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/maria_rodriguez.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Maria Rodriguez</h3>
+                 <small>Psychologist</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> PhD</span><br>
+             <span class="left"><b>Room:</b> 307</span><br>
+             <span class="left"><b>Email:</b> maria.rodriguez@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-6" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-6" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-6" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-5" class="btn grd1"><i class="fa fa-info"></i></button>
+                 
+                 <div id="fb-container-6" class="fb-container">
+                  <div id="fb-content-6" class="fb-content">
+                     <div class="post">
+                      <button id="fb-close" class="fb-close-6">&times;</button>
+                        <div class="user-info">
+                          <img src="images/maria_rodriguez.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Maria Rodriguez</h2>
+                            <p>3 hrs &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Just published a new article on the importance of mental health in the workplace, check it out on my website!</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="like-action">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="num-likes">10</span>
+                            <span>Like</span>
+                          </div>
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span class="num-comments">3</span>
+                            <span>Comment</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                 <div id="linkedin-container-6" class="linkedin-container">
+                  <div id="linkedin-content-6" class="linkedin-content">
+                     <div class="linkedin-post">
+                        <button id="linkedin-close" class="linkedin-close-6">&times;</button>
+                        <div class="post-header">
+                          <img src="images/maria_rodriguez.jpg" alt="Profile Picture">
+                          <div class="user-info">
+                            <h2>Maria Rodriguez</h2>
+                            <p>1 hr &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Exciting news! We're thrilled to announce the launch of our new research project aimed at improving mental health outcomes. Our team of experts will be working to identify new and effective approaches to support individuals struggling with mental health challenges. Together, we can make a real difference in the lives of those affected by mental health issues. Stay tuned for updates and progress!</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="reaction-count">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span>16</span>
+                          </div>
+                          <div class="comment-count">
+                            <i class="fa fa-comment"></i>
+                            <span>11</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+               </div>
+                 <div id="twitter-container-6" class="twitter-container">
+                  <div id="twitter-content-6" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-6">&times;</button>
+                     <p>Maria Rodriguez is not on Twitter</p>
+                  </div>
+               </div>
+                  <div id="popup-container-5" class="popup-container-5">
+                    <div class="popup-content-5" id="popup-content-5">
+                      <div class="card-5">
+                       <button id="close-button-5" class="close-button-5">&times;</button>
+                        <h4>About Maria Rodriguez:</h4>
+                        <ul id="popup-list">
+                          <li>Active in research, publishing a lot</li>
+                          <li>Concerned about mental health at work</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+
+             <!-- 6 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/johnathan_kim.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Johnathan Kim</h3>
+                 <small>Cardiologist</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> MD</span><br>
+             <span class="left"><b>Room:</b> 505</span><br>
+             <span class="left"><b>Email:</b> johnathan.kim@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-7" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-7" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-7" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+               <button id="show-button-6" class="btn grd1"><i class="fa fa-info"></i></button>
+               <div id="twitter-container-7" class="twitter-container">
+                  <div id="twitter-content-7" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-7">&times;</button>
+                     <div class="tweet">
+                        <div class="user-info">
+                          <img src="images/johnathan_kim.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Johnathan Kim</h2>
+                            <p>@johnathan_kim &middot; 2h</p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Feeling grateful and humbled to receive the Top Doctor award from my esteemed colleagues in the cardiology community. Thank you for your support and recognition. It's an honor to be part of such a talented and dedicated group of healthcare professionals. I look forward to continuing our work together to improve patient outcomes. #TopDoctor #Cardiology #Grateful</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span>7</span>
+                          </div>
+                          <div class="retweet-action">
+                            <i class="fa fa-retweet"></i>
+                            <span>0</span>
+                          </div>
+                          <div class="like-action">
+                            <i class="fa fa-heart"></i>
+                            <span>31</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+               </div>
+               <div id="fb-container-7" class="fb-container">
+                  <div id="fb-content-7" class="fb-content">
+                     <div class="post">
+                      <button id="fb-close" class="fb-close-7">&times;</button>
+                        <div class="user-info">
+                          <img src="images/johnathan_kim.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Johnathan Kim</h2>
+                            <p>1 hr &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Netflix has the most unfriendly customer service. It's no longer possible to access your account when traveling outside your country, and the issue can't seem to be resolved. Additionally, the unhelpful customer service representatives suggest restarting your account two weeks later once you've returned to your home country. This is by far the worst customer service I've ever experienced</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="like-action">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="num-likes">15</span>
+                            <span>Like</span>
+                          </div>
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span class="num-comments">3</span>
+                            <span>Comment</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                 <div id="linkedin-container-7" class="linkedin-container">
+                  <div id="linkedin-content-7" class="linkedin-content">
+                     <button id="linkedin-close" class="linkedin-close-7">&times;</button>
+                     <p>Johnathan Kim is not on LinkedIn</p>
+                  </div>
+               </div>
+                  <div id="popup-container-6" class="popup-container-6">
+                    <div class="popup-content-6" id="popup-content-6">
+                      <div class="card-6">
+                       <button id="close-button-6" class="close-button-6">&times;</button>
+                        <h4>About Johnathan Kim:</h4>
+                        <ul id="popup-list">
+                          <li>Personal email: johnathankim75@gmail.com</li>
+                          <li>Date of birth: August 2, 1975</li>
+                          <li>Netflix User</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+
+
+
+
+           <!-- 8 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/adam_davis.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Adam Davis</h3>
+                 <small>Neurosurgeon</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> MD</span><br>
+             <span class="left"><b>Room:</b> 608</span><br>
+             <span class="left"><b>Email:</b> adam.davis@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-8" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-8" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-8" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-8" class="btn grd1"><i class="fa fa-info"></i></button>
+                 <div id="twitter-container-8" class="twitter-container">
+                  <div id="twitter-content-8" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-8">&times;</button>
+                     <div class="tweet">
+                        <div class="user-info">
+                          <img src="images/adam_davis.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Adam Davis</h2>
+                            <p>@adam_davis &middot; 2h</p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Hey Twitterverse, is anyone else having trouble logging into their Amazon account? Keep getting an error message and not sure what to do. #Amazon #Help</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span>6</span>
+                          </div>
+                          <div class="retweet-action">
+                            <i class="fa fa-retweet"></i>
+                            <span>0</span>
+                          </div>
+                          <div class="like-action">
+                            <i class="fa fa-heart"></i>
+                            <span>10</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+               </div>
+                 <div id="linkedin-container-8" class="linkedin-container">
+                  <div id="linkedin-content-8" class="linkedin-content">
+                     <button id="linkedin-close" class="linkedin-close-8">&times;</button>
+                     <p>Adam Davis is not on LinkedIn</p>
+                  </div>
+               </div>
+               <div id="fb-container-8" class="fb-container">
+                  <div id="fb-content-8" class="fb-content">
+                     <div class="post">
+                      <button id="fb-close" class="fb-close-8">&times;</button>
+                        <div class="user-info">
+                          <img src="images/adam_davis.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Adam Davis</h2>
+                            <p>7 hrs &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Just finished a successful surgery to remove a brain tumor, feeling grateful for the opportunity to make a difference in patients' lives.</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="like-action">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="num-likes">60</span>
+                            <span>Like</span>
+                          </div>
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span class="num-comments">21</span>
+                            <span>Comment</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                  <div id="popup-container-8" class="popup-container-8">
+                    <div class="popup-content-8" id="popup-content-8">
+                      <div class="card-8">
+                       <button id="close-button-8" class="close-button-8">&times;</button>
+                        <h4>About Adam Davis:</h4>
+                        <ul id="popup-list">
+                          <li>Amazon User</li>
+                          <li>Likes to watch movies</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+
+                     <!-- 9 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/sophia_kim.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Sophia Kim</h3>
+                 <small>Clinical Psychologist</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> PhD</span><br>
+             <span class="left"><b>Room:</b> 406</span><br>
+             <span class="left"><b>Email:</b> sophia.kim@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+               <button id="fb-9" class="btn grd1"><i class="fa fa-facebook"></i></button>
+               <button id="twitter-9" class="btn grd1"><i class="fa fa-twitter"></i></button>
+               <button id="linkedin-9" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-9" class="btn grd1"><i class="fa fa-info"></i></button>
+                 <div id="twitter-container-9" class="twitter-container">
+                  <div id="twitter-content-9" class="twitter-content">
+                     <button id="twitter-close" class="twitter-close-9">&times;</button>
+                     <div class="tweet">
+                        <div class="user-info">
+                          <img src="images/sophia_kim.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Sophia Kim</h2>
+                            <p>@sophia_kim &middot; 7h</p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fa fa-ellipsis"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Excited and grateful to be teaching a course on cognitive-behavioral therapy at a local university this semester. Looking forward to sharing my knowledge and helping students enhance their skills in mental health treatment. #CBT #teaching #mentalhealth</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span>26</span>
+                          </div>
+                          <div class="retweet-action">
+                            <i class="fa fa-retweet"></i>
+                            <span>0</span>
+                          </div>
+                          <div class="like-action">
+                            <i class="fa fa-heart"></i>
+                            <span>50</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                          </div>
+                        </div>
+                      </div>                      
+                  </div>
+               </div>
+               <div id="fb-container-9" class="fb-container">
+                  <div id="fb-content-9" class="fb-content">
+                     <div class="post">
+                      <button id="fb-close" class="fb-close-9">&times;</button>
+                        <div class="user-info">
+                          <img src="images/sophia_kim.jpg" alt="Profile Picture">
+                          <div class="user-name-and-time">
+                            <h2>Sophia Kim</h2>
+                            <p>6 hrs &middot; <i class="fas fa-globe"></i></p>
+                          </div>
+                          <div class="post-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <p>Just got back from a gorgeous hike in the mountains and feeling so refreshed! It's amazing what spending time in nature can do for your mental health. The fresh air, the breathtaking views, and the physical activity all work together to clear your mind and boost your mood. If you're feeling stressed or overwhelmed, I highly recommend taking some time to disconnect from technology and immerse yourself in the natural world. It's truly therapeutic!</p>
+                        </div>
+                        <div class="post-actions">
+                          <div class="like-action">
+                            <i class="fa fa-thumbs-up"></i>
+                            <span class="num-likes">60</span>
+                            <span>Like</span>
+                          </div>
+                          <div class="comment-action">
+                            <i class="fa fa-comment"></i>
+                            <span class="num-comments">21</span>
+                            <span>Comment</span>
+                          </div>
+                          <div class="share-action">
+                            <i class="fa fa-share"></i>
+                            <span>Share</span>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  </div>   
+                 <div id="linkedin-container-9" class="linkedin-container">
+                  <div id="linkedin-content-9" class="linkedin-content">
+                     <button id="linkedin-close" class="linkedin-close-9">&times;</button>
+                     <p>Sophia Kim is not on LinkedIn</p>
+                  </div>
+               </div>
+                  <div id="popup-container-9" class="popup-container-9">
+                    <div class="popup-content-9" id="popup-content-9">
+                      <div class="card-9">
+                       <button id="close-button-9" class="close-button-9">&times;</button>
+                        <h4>About Sophia Kim:</h4>
+                        <ul id="popup-list">
+                          <li>Lecturer</li>
+                          <li>Likes going hiking</li>
+                          <li>Not married</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+
+        <!-- 2 -->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn widget-container" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+         <div class="widget clearfix">
+             <img src="images/mark_johnson.jpg" alt="" class="img-responsive img-rounded">
+             <div class="widget-title">
+                 <h3>Dr. Mark Johnson</h3>
+                 <small>Research Scientist</small>
+             </div>
+             <!-- end title -->
+             <span class="left"><b>Qualification:</b> PhD</span><br>
+             <span class="left"><b>Room:</b> 412</span><br>
+             <span class="left"><b>Email:</b> mark.johnson@recypher-hospital.com</span><br>
+ 
+             <div class="footer-social">
+                <button id="fb-2" class="btn grd1"><i class="fa fa-facebook"></i></button>
+                <button id="twitter-2" class="btn grd1"><i class="fa fa-twitter"></i></button>
+                <button id="linkedin-2" class="btn grd1"><i class="fa fa-linkedin"></i></button>
+                 <button id="show-button-2" class="btn grd1"><i class="fa fa-info"></i></button>
+                 <div id="twitter-container-2" class="twitter-container">
+                   <div id="twitter-content-2" class="twitter-content">
+                      <button id="twitter-close" class="twitter-close-2">&times;</button>
+                      <p>Mark Johnson is not on Twitter</p>
+                   </div>
+                </div>
+                <div id="linkedin-container-2" class="linkedin-container">
+                   <div id="linkedin-content-2" class="linkedin-content">
+                      <button id="linkedin-close" class="linkedin-close-2">&times;</button>
+                      <p>Mark Johnson is not on LinkedIn</p>
+                   </div>
+                </div>
+                 <div id="fb-container-2" class="fb-container">
+                   <div id="fb-content-2" class="fb-content">
+                      <div class="post">
+                       <button id="fb-close" class="fb-close-2">&times;</button>
+                         <div class="user-info">
+                           <img src="images/mark_johnson.jpg" alt="Profile Picture">
+                           <div class="user-name-and-time">
+                             <h2>Mark Johnson</h2>
+                             <p>2 hrs &middot; <i class="fas fa-globe"></i></p>
+                           </div>
+                           <div class="post-options">
+                             <i class="fas fa-ellipsis-h"></i>
+                           </div>
+                         </div>
+                         <div class="post-content">
+                           <p>Celebrating the publication of our latest research article with some champagne and good company!</p>
+                         </div>
+                         <div class="post-actions">
+                           <div class="like-action">
+                             <i class="fa fa-thumbs-up"></i>
+                             <span class="num-likes">25</span>
+                             <span>Like</span>
+                           </div>
+                           <div class="comment-action">
+                             <i class="fa fa-comment"></i>
+                             <span class="num-comments">12</span>
+                             <span>Comment</span>
+                           </div>
+                           <div class="share-action">
+                             <i class="fa fa-share"></i>
+                             <span>Share</span>
+                           </div>
+                         </div>
+                       </div>
+                   </div>
+                 </div>
+                  <div id="popup-container-2" class="popup-container-2">
+                    <div class="popup-content-2" id="popup-content-2">
+                      <div class="card-2">
+                       <button id="close-button-2" class="close-button-2">&times;</button>
+                        <h4>About Mark Johnson:</h4>
+                        <ul id="popup-list">
+                          <li>Birth date: November 4, 1979</li>
+                          <li>Likes to go golfing</li>
+                          <li>Likes new cars</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+         </div><!--widget -->
+          </div><!-- end col -->
+
+     </div><!-- end row -->
+ </div><!-- end container -->
+</div>
+
+<div id="testimonials" class="section wb wow fadeIn">
+   <div class="container">
+      <div class="heading">
+         <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
+         <h2>Testimonials</h2>
+      </div>
+      <!-- end title -->
+      <div class="row">
+         <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <div class="testimonial clearfix">
+               <div class="desc">
+                  <h3><i class="fa fa-quote-left"></i> The amazing clinic! Wonderful Support!</h3>
+                  <p class="lead">I recently found myself under your care for a cardiac issue. While there, accompanied by my wife, we found that the entire staff at Recypher Hospital was exceedingly professional and efficient, from your E.R. receptionists to the cardiac care team. You should be proud of your outstanding staff and service.</p>
+               </div>
+               <div class="testi-meta">
+                  <img src="images/testi_01.png" alt="" class="img-responsive alignleft">
+                  <h4>James<small>- Manager at Racer</small></h4>
+               </div>
+               <!-- end testi-meta -->
+            </div>
+            <!-- end testimonial -->
+         </div>
+         <!-- end col -->
+         <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+            <div class="testimonial clearfix">
+               <div class="desc">
+                  <h3><i class="fa fa-quote-left"></i> Thanks for Helping us!</h3>
+                  <p class="lead">My wife and I were recently heading to Mars. While on the SpaceX Starship my wife told me that she wasn’t feeling well and didn’t think we should get on the awesome rocket. We were eventually taken to Recypher Hospital. From the moment she was wheeled through the doors of the emergency room, my fears were immediately put to rest. A courteous, compassionate and competent group of people immediately enveloped her in a cocoon of security. I would like to tell you that you should be extremely proud of your staff for the manner in which they treated a frightened pair of senior citizens.</p>
+               </div>
+               <div class="testi-meta">
+                  <img src="images/testi_02.png" alt="" class="img-responsive alignleft">
+                  <h4>Andrew <small>- Life Manager</small></h4>
+               </div>
+               <!-- end testi-meta -->
+            </div>
+            <!-- end testimonial -->
+         </div>
+         <!-- end col -->
+      </div>
+      <!-- end row -->
+      <hr class="invis">
+      <div class="row">
+         <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="testimonial clearfix">
+               <div class="desc">
+                  <h3><i class="fa fa-quote-left"></i> We appreciate the special care!</h3>
+                  <p class="lead">We would like to let you know how much we appreciate the special care our daughter was given by the doctors and staff at your hospital. Our baby’s physician was professional, kind, understanding, and her treatment was “right on.” Your organization should be proud to have such kind hearted people. They made sure that my daughter’s hospitalization was very pleasant.</p>
+               </div>
+               <div class="testi-meta">
+                  <img src="images/testi_03.png" alt="" class="img-responsive alignleft">
+                  <h4>Amanda<small>- Mother</small></h4>
+               </div>
+               <!-- end testi-meta -->
+            </div>
+            <!-- end testimonial -->
+         </div>
+         <!-- end col -->
+         <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+            <div class="testimonial clearfix">
+               <div class="desc">
+                  <h3><i class="fa fa-quote-left"></i> Thank you for the services you provide</h3>
+                  <p class="lead">I am writing on behalf of my brother who was a patient in your hospital. I would like to thank you on behalf of my entire family for the help and consideration shown to me in what was a very difficult time. Again, I would like to thank you for the services you provide to patients and their families.</p>
+               </div>
+               <div class="testi-meta">
+                  <img src="images/testi_01.png" alt="" class="img-responsive alignleft">
+                  <h4>Martin<small>- Brother of the patient</small></h4>
+               </div>
+               <!-- end testi-meta -->
+            </div>
+            <!-- end testimonial -->
+         </div>
+         <!-- end col -->
+      </div>
+      <!-- end row -->
+   </div>
+   <!-- end container -->
+</div>
+<!-- end section -->
+
+<footer id="footer" class="footer-area wow fadeIn">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <div class="logo padding">
+               <a href=""><img src="images/logo.png" alt=""></a>
+               <p>Opened in 1958, Recypher Hospital Healthcare System has grown to include a 415-bed</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="footer-info padding">
+               <h3>CONTACT US</h3>
+               <p><i class="fa fa-map-marker" aria-hidden="true"></i> PO Box 17122 Dead Street 8007 Atlantis</p>
+               <p><i class="fa fa-paper-plane" aria-hidden="true"></i> info@recypher.com</p>
+               <p><i class="fa fa-phone" aria-hidden="true"></i> (+909) 800 123 456</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="subcriber-info">
+               <h3>SUBSCRIBE</h3>
+               <p>Get healthy news, tip and solutions to your problems from our experts.</p>
+               <div class="subcriber-box">
+                  <form id="mc-form" class="mc-form">
+                     <div class="newsletter-form">
+                        <input type="email" autocomplete="off" id="mc-email" placeholder="Email address" class="form-control" name="EMAIL">
+                        <button class="mc-submit" type="submit"><i class="fa fa-paper-plane"></i></button> 
+                        <div class="clearfix"></div>
+                        <!-- mailchimp-alerts Start -->
+                        <div class="mailchimp-alerts">
+                           <div class="mailchimp-submitting"></div>
+                           <!-- mailchimp-submitting end -->
+                           <div class="mailchimp-success"></div>
+                           <!-- mailchimp-success end -->
+                           <div class="mailchimp-error"></div>
+                           <!-- mailchimp-error end -->
+                        </div>
+                        <!-- mailchimp-alerts end -->
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<div class="copyright-area wow fadeIn">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+            <div class="footer-text">
+               <p>© 2022 Recypher. All Rights Reserved.</p>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="social">
+               <ul class="social-links">
+                  <li><a href=""><i class="fa fa-rss"></i></a></li>
+                  <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                  <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                  <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                  <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+    
+        <div id="overlay"></div>
+        <script src="script.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+
+
+    </body>
+</html>
