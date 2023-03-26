@@ -60,6 +60,7 @@ function startTutorial() {
   function toggleHints() {
     const hintsMenu = document.getElementById("hints-menu");
     hintsMenu.classList.toggle("show");
+    hintsMenu.style.overflowY = 'scroll';
     currentHint = 0;
     showHint(currentHint);
   }
