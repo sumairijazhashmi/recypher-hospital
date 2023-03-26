@@ -2161,3 +2161,45 @@ nav.main-menu .navbar-toggle {border: solid #fff 2px;}
         border: 0 solid #ededed;
     }
 }
+
+@media only screen and (max-width: 768px) {
+  .hints-container {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .hints-button {
+    font-size: 14px;
+  }
+  
+  .hints-menu {
+    width: 90%;
+    height: 60%;
+    bottom: 60px;
+    right: 5%;
+  }
+  
+  .hints-menu h2 {
+    font-size: 16px;
+  }
+  
+  .hints-menu p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hints-menu {
+    height: 70%;
+    bottom: 50px;
+    right: 5%;
+  }
+  
+  .hints-menu h2 {
+    font-size: 14px;
+  }
+  
+  .hints-menu p {
+    font-size: 12px;
+  }
+}
