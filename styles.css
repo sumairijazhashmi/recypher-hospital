@@ -18,6 +18,10 @@ filter: blur(3px); /* apply a blur effect to all elements behind the overlay */
 opacity: 0;
 }
 
+.hints-container {
+overflow-y: auto;
+}
+
 .tutorial {
 display: none;
 position: fixed;
