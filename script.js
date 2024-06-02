@@ -171,197 +171,197 @@ function startTutorial() {
 // });
 
 
-const showButton = document.getElementById("show-button-1");
-const popupContainer = document.getElementById("popup-container-1");
+// const showButton = document.getElementById("show-button-1");
+// const popupContainer = document.getElementById("popup-container-1");
 
-// Get the close button element inside the popup container
-const closeButton = popupContainer.querySelector(".close-button-1");
+// // Get the close button element inside the popup container
+// const closeButton = popupContainer.querySelector(".close-button-1");
 
-// Add a click event listener to the show button
-showButton.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer);
+// // Add a click event listener to the show button
+// showButton.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer);
 
-  popupContainer.style.display = "block";
-  popupContainer.style.zIndex = "100000000";
-});
+//   popupContainer.style.display = "block";
+//   popupContainer.style.zIndex = "100000000";
+// });
 
-// Add a click event listener to the close button
-closeButton.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer.style.display = "none";
-  popupContainer.style.zIndex = "0";
+// // Add a click event listener to the close button
+// closeButton.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer.style.display = "none";
+//   popupContainer.style.zIndex = "0";
 
-});
-
-
-const showButton2 = document.getElementById("show-button-2");
-const popupContainer2 = document.getElementById("popup-container-2");
-
-// Get the close button element inside the popup container
-const closeButton2 = popupContainer2.querySelector(".close-button-2");
-
-// Add a click event listener to the show button
-showButton2.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer2);
-
-  popupContainer2.style.display = "block";
-  popupContainer2.style.zIndex = "100000000";
-});
-
-// Add a click event listener to the close button
-closeButton2.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer2.style.display = "none";
-  popupContainer2.style.zIndex = "0";
-
-});
+// });
 
 
-const showButton3 = document.getElementById("show-button-3");
-const popupContainer3 = document.getElementById("popup-container-3");
+// const showButton2 = document.getElementById("show-button-2");
+// const popupContainer2 = document.getElementById("popup-container-2");
 
-// Get the close button element inside the popup container
-const closeButton3 = popupContainer3.querySelector(".close-button-3");
+// // Get the close button element inside the popup container
+// const closeButton2 = popupContainer2.querySelector(".close-button-2");
 
-// Add a click event listener to the show button
-showButton3.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer3);
+// // Add a click event listener to the show button
+// showButton2.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer2);
 
-  popupContainer3.style.display = "block";
-  popupContainer3.style.zIndex = "100000000";
-});
+//   popupContainer2.style.display = "block";
+//   popupContainer2.style.zIndex = "100000000";
+// });
 
-// Add a click event listener to the close button
-closeButton3.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer3.style.display = "none";
-  popupContainer3.style.zIndex = "0";
+// // Add a click event listener to the close button
+// closeButton2.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer2.style.display = "none";
+//   popupContainer2.style.zIndex = "0";
 
-});
-
-const showButton4 = document.getElementById("show-button-4");
-const popupContainer4 = document.getElementById("popup-container-4");
-
-// Get the close button element inside the popup container
-const closeButton4 = popupContainer4.querySelector(".close-button-4");
-
-// Add a click event listener to the show button
-showButton4.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer4);
-
-  popupContainer4.style.display = "block";
-  popupContainer4.style.zIndex = "100000000";
-});
-
-// Add a click event listener to the close button
-closeButton4.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer4.style.display = "none";
-  popupContainer4.style.zIndex = "0";
-
-});
+// });
 
 
+// const showButton3 = document.getElementById("show-button-3");
+// const popupContainer3 = document.getElementById("popup-container-3");
 
-const showButton5 = document.getElementById("show-button-5");
-const popupContainer5 = document.getElementById("popup-container-5");
+// // Get the close button element inside the popup container
+// const closeButton3 = popupContainer3.querySelector(".close-button-3");
 
-// Get the close button element inside the popup container
-const closeButton5 = popupContainer5.querySelector(".close-button-5");
+// // Add a click event listener to the show button
+// showButton3.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer3);
 
-// Add a click event listener to the show button
-showButton5.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer5);
+//   popupContainer3.style.display = "block";
+//   popupContainer3.style.zIndex = "100000000";
+// });
 
-  popupContainer5.style.display = "block";
-  popupContainer5.style.zIndex = "100000000";
-});
+// // Add a click event listener to the close button
+// closeButton3.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer3.style.display = "none";
+//   popupContainer3.style.zIndex = "0";
 
-// Add a click event listener to the close button
-closeButton5.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer5.style.display = "none";
-  popupContainer5.style.zIndex = "0";
+// });
 
-});
+// const showButton4 = document.getElementById("show-button-4");
+// const popupContainer4 = document.getElementById("popup-container-4");
+
+// // Get the close button element inside the popup container
+// const closeButton4 = popupContainer4.querySelector(".close-button-4");
+
+// // Add a click event listener to the show button
+// showButton4.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer4);
+
+//   popupContainer4.style.display = "block";
+//   popupContainer4.style.zIndex = "100000000";
+// });
+
+// // Add a click event listener to the close button
+// closeButton4.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer4.style.display = "none";
+//   popupContainer4.style.zIndex = "0";
+
+// });
 
 
 
-const showButton6 = document.getElementById("show-button-6");
-const popupContainer6 = document.getElementById("popup-container-6");
+// const showButton5 = document.getElementById("show-button-5");
+// const popupContainer5 = document.getElementById("popup-container-5");
 
-// Get the close button element inside the popup container
-const closeButton6 = popupContainer6.querySelector(".close-button-6");
+// // Get the close button element inside the popup container
+// const closeButton5 = popupContainer5.querySelector(".close-button-5");
 
-// Add a click event listener to the show button
-showButton6.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer6);
+// // Add a click event listener to the show button
+// showButton5.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer5);
 
-  popupContainer6.style.display = "block";
-  popupContainer6.style.zIndex = "100000000";
-});
+//   popupContainer5.style.display = "block";
+//   popupContainer5.style.zIndex = "100000000";
+// });
 
-// Add a click event listener to the close button
-closeButton6.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer6.style.display = "none";
-  popupContainer6.style.zIndex = "0";
+// // Add a click event listener to the close button
+// closeButton5.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer5.style.display = "none";
+//   popupContainer5.style.zIndex = "0";
 
-});
+// });
 
 
 
-const showButton7 = document.getElementById("show-button-7");
-const popupContainer7 = document.getElementById("popup-container-7");
+// const showButton6 = document.getElementById("show-button-6");
+// const popupContainer6 = document.getElementById("popup-container-6");
 
-// Get the close button element inside the popup container
-const closeButton7 = popupContainer7.querySelector(".close-button-7");
+// // Get the close button element inside the popup container
+// const closeButton6 = popupContainer6.querySelector(".close-button-6");
 
-// Add a click event listener to the show button
-showButton7.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer7);
+// // Add a click event listener to the show button
+// showButton6.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer6);
 
-  popupContainer7.style.display = "block";
-  popupContainer7.style.zIndex = "100000000";
-});
+//   popupContainer6.style.display = "block";
+//   popupContainer6.style.zIndex = "100000000";
+// });
 
-// Add a click event listener to the close button
-closeButton7.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer7.style.display = "none";
-  popupContainer7.style.zIndex = "0";
+// // Add a click event listener to the close button
+// closeButton6.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer6.style.display = "none";
+//   popupContainer6.style.zIndex = "0";
 
-});
+// });
 
-const showButton8 = document.getElementById("show-button-8");
-const popupContainer8 = document.getElementById("popup-container-8");
 
-// Get the close button element inside the popup container
-const closeButton8 = popupContainer8.querySelector(".close-button-8");
 
-// Add a click event listener to the show button
-showButton8.addEventListener("click", function() {
-  // Show the popup container and set its z-index to 1
-  document.body.appendChild(popupContainer8);
+// const showButton7 = document.getElementById("show-button-7");
+// const popupContainer7 = document.getElementById("popup-container-7");
 
-  popupContainer8.style.display = "block";
-  popupContainer8.style.zIndex = "100000000";
-});
+// // Get the close button element inside the popup container
+// const closeButton7 = popupContainer7.querySelector(".close-button-7");
 
-// Add a click event listener to the close button
-closeButton8.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  popupContainer8.style.display = "none";
-  popupContainer8.style.zIndex = "0";
+// // Add a click event listener to the show button
+// showButton7.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer7);
 
-});
+//   popupContainer7.style.display = "block";
+//   popupContainer7.style.zIndex = "100000000";
+// });
+
+// // Add a click event listener to the close button
+// closeButton7.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer7.style.display = "none";
+//   popupContainer7.style.zIndex = "0";
+
+// });
+
+// const showButton8 = document.getElementById("show-button-8");
+// const popupContainer8 = document.getElementById("popup-container-8");
+
+// // Get the close button element inside the popup container
+// const closeButton8 = popupContainer8.querySelector(".close-button-8");
+
+// // Add a click event listener to the show button
+// showButton8.addEventListener("click", function() {
+//   // Show the popup container and set its z-index to 1
+//   document.body.appendChild(popupContainer8);
+
+//   popupContainer8.style.display = "block";
+//   popupContainer8.style.zIndex = "100000000";
+// });
+
+// // Add a click event listener to the close button
+// closeButton8.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   popupContainer8.style.display = "none";
+//   popupContainer8.style.zIndex = "0";
+
+// });
 
 const showButton9 = document.getElementById("show-button-9");
 const popupContainer9 = document.getElementById("popup-container-9");
@@ -386,154 +386,154 @@ closeButton9.addEventListener("click", function() {
 
 });
 
-var showPostButton = document.getElementById("fb-1");
-var postContainer = document.getElementById("fb-container-1");
-var closeFB = postContainer.querySelector(".fb-close-1");
+// var showPostButton = document.getElementById("fb-1");
+// var postContainer = document.getElementById("fb-container-1");
+// var closeFB = postContainer.querySelector(".fb-close-1");
 
 
-showPostButton.addEventListener("click", function() {
-  document.body.appendChild(postContainer);
-  postContainer.style.display = "block";
-  postContainer.style.zIndex = "100000000";
-});
+// showPostButton.addEventListener("click", function() {
+//   document.body.appendChild(postContainer);
+//   postContainer.style.display = "block";
+//   postContainer.style.zIndex = "100000000";
+// });
 
-closeFB.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer.style.display = "none";
-  postContainer.style.zIndex = "0";
+// closeFB.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer.style.display = "none";
+//   postContainer.style.zIndex = "0";
 
-});
+// });
 
-var showPostButton2 = document.getElementById("fb-2");
-var postContainer2 = document.getElementById("fb-container-2");
-var closeFB2 = postContainer2.querySelector(".fb-close-2");
-
-
-showPostButton2.addEventListener("click", function() {
-  document.body.appendChild(postContainer2);
-  postContainer2.style.display = "block";
-  postContainer2.style.zIndex = "100000000";
-});
-
-closeFB2.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer2.style.display = "none";
-  postContainer2.style.zIndex = "0";
-
-});
-
-var showPostButton3 = document.getElementById("fb-3");
-var postContainer3 = document.getElementById("fb-container-3");
-var closeFB3 = postContainer3.querySelector(".fb-close-3");
+// var showPostButton2 = document.getElementById("fb-2");
+// var postContainer2 = document.getElementById("fb-container-2");
+// var closeFB2 = postContainer2.querySelector(".fb-close-2");
 
 
-showPostButton3.addEventListener("click", function() {
-  document.body.appendChild(postContainer3);
-  postContainer3.style.display = "block";
-  postContainer3.style.zIndex = "100000000";
-});
+// showPostButton2.addEventListener("click", function() {
+//   document.body.appendChild(postContainer2);
+//   postContainer2.style.display = "block";
+//   postContainer2.style.zIndex = "100000000";
+// });
 
-closeFB3.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer3.style.display = "none";
-  postContainer3.style.zIndex = "0";
+// closeFB2.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer2.style.display = "none";
+//   postContainer2.style.zIndex = "0";
 
-});
+// });
 
-var showPostButton4 = document.getElementById("fb-4");
-var postContainer4 = document.getElementById("fb-container-4");
-var closeFB4 = postContainer4.querySelector(".fb-close-4");
-
-
-showPostButton4.addEventListener("click", function() {
-  document.body.appendChild(postContainer4);
-  postContainer4.style.display = "block";
-  postContainer4.style.zIndex = "100000000";
-});
-
-closeFB4.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer4.style.display = "none";
-  postContainer4.style.zIndex = "0";
-
-});
+// var showPostButton3 = document.getElementById("fb-3");
+// var postContainer3 = document.getElementById("fb-container-3");
+// var closeFB3 = postContainer3.querySelector(".fb-close-3");
 
 
-var showPostButton5 = document.getElementById("fb-5");
-var postContainer5 = document.getElementById("fb-container-5");
-var closeFB5 = postContainer5.querySelector(".fb-close-5");
+// showPostButton3.addEventListener("click", function() {
+//   document.body.appendChild(postContainer3);
+//   postContainer3.style.display = "block";
+//   postContainer3.style.zIndex = "100000000";
+// });
+
+// closeFB3.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer3.style.display = "none";
+//   postContainer3.style.zIndex = "0";
+
+// });
+
+// var showPostButton4 = document.getElementById("fb-4");
+// var postContainer4 = document.getElementById("fb-container-4");
+// var closeFB4 = postContainer4.querySelector(".fb-close-4");
 
 
-showPostButton5.addEventListener("click", function() {
-  document.body.appendChild(postContainer5);
-  postContainer5.style.display = "block";
-  postContainer5.style.zIndex = "100000000";
-});
+// showPostButton4.addEventListener("click", function() {
+//   document.body.appendChild(postContainer4);
+//   postContainer4.style.display = "block";
+//   postContainer4.style.zIndex = "100000000";
+// });
 
-closeFB5.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer5.style.display = "none";
-  postContainer5.style.zIndex = "0";
+// closeFB4.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer4.style.display = "none";
+//   postContainer4.style.zIndex = "0";
 
-});
-
-
-var showPostButton6 = document.getElementById("fb-6");
-var postContainer6 = document.getElementById("fb-container-6");
-var closeFB6 = postContainer6.querySelector(".fb-close-6");
+// });
 
 
-showPostButton6.addEventListener("click", function() {
-  document.body.appendChild(postContainer6);
-  postContainer6.style.display = "block";
-  postContainer6.style.zIndex = "100000000";
-});
-
-closeFB6.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer6.style.display = "none";
-  postContainer6.style.zIndex = "0";
-
-});
+// var showPostButton5 = document.getElementById("fb-5");
+// var postContainer5 = document.getElementById("fb-container-5");
+// var closeFB5 = postContainer5.querySelector(".fb-close-5");
 
 
-var showPostButton7 = document.getElementById("fb-7");
-var postContainer7 = document.getElementById("fb-container-7");
-var closeFB7 = postContainer7.querySelector(".fb-close-7");
+// showPostButton5.addEventListener("click", function() {
+//   document.body.appendChild(postContainer5);
+//   postContainer5.style.display = "block";
+//   postContainer5.style.zIndex = "100000000";
+// });
+
+// closeFB5.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer5.style.display = "none";
+//   postContainer5.style.zIndex = "0";
+
+// });
 
 
-showPostButton7.addEventListener("click", function() {
-  document.body.appendChild(postContainer7);
-  postContainer7.style.display = "block";
-  postContainer7.style.zIndex = "100000000";
-});
-
-closeFB7.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer7.style.display = "none";
-  postContainer7.style.zIndex = "0";
-
-});
+// var showPostButton6 = document.getElementById("fb-6");
+// var postContainer6 = document.getElementById("fb-container-6");
+// var closeFB6 = postContainer6.querySelector(".fb-close-6");
 
 
+// showPostButton6.addEventListener("click", function() {
+//   document.body.appendChild(postContainer6);
+//   postContainer6.style.display = "block";
+//   postContainer6.style.zIndex = "100000000";
+// });
 
-var showPostButton8 = document.getElementById("fb-8");
-var postContainer8 = document.getElementById("fb-container-8");
-var closeFB8 = postContainer8.querySelector(".fb-close-8");
+// closeFB6.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer6.style.display = "none";
+//   postContainer6.style.zIndex = "0";
+
+// });
 
 
-showPostButton8.addEventListener("click", function() {
-  document.body.appendChild(postContainer8);
-  postContainer8.style.display = "block";
-  postContainer8.style.zIndex = "100000000";
-});
+// var showPostButton7 = document.getElementById("fb-7");
+// var postContainer7 = document.getElementById("fb-container-7");
+// var closeFB7 = postContainer7.querySelector(".fb-close-7");
 
-closeFB8.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  postContainer8.style.display = "none";
-  postContainer8.style.zIndex = "0";
 
-});
+// showPostButton7.addEventListener("click", function() {
+//   document.body.appendChild(postContainer7);
+//   postContainer7.style.display = "block";
+//   postContainer7.style.zIndex = "100000000";
+// });
+
+// closeFB7.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer7.style.display = "none";
+//   postContainer7.style.zIndex = "0";
+
+// });
+
+
+
+// var showPostButton8 = document.getElementById("fb-8");
+// var postContainer8 = document.getElementById("fb-container-8");
+// var closeFB8 = postContainer8.querySelector(".fb-close-8");
+
+
+// showPostButton8.addEventListener("click", function() {
+//   document.body.appendChild(postContainer8);
+//   postContainer8.style.display = "block";
+//   postContainer8.style.zIndex = "100000000";
+// });
+
+// closeFB8.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   postContainer8.style.display = "none";
+//   postContainer8.style.zIndex = "0";
+
+// });
 
 
 var showPostButton9 = document.getElementById("fb-9");
@@ -554,136 +554,136 @@ closeFB9.addEventListener("click", function() {
 
 });
 
-var showTweetButton = document.getElementById("twitter-1");
-var tweetContainer = document.getElementById("twitter-container-1");
-var closeTwitter = tweetContainer.querySelector(".twitter-close-1");
+// var showTweetButton = document.getElementById("twitter-1");
+// var tweetContainer = document.getElementById("twitter-container-1");
+// var closeTwitter = tweetContainer.querySelector(".twitter-close-1");
 
-showTweetButton.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer);
-  tweetContainer.style.display = "block";
-  tweetContainer.style.zIndex = "100000000";
-});
+// showTweetButton.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer);
+//   tweetContainer.style.display = "block";
+//   tweetContainer.style.zIndex = "100000000";
+// });
 
-closeTwitter.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer.style.display = "none";
-  tweetContainer.style.zIndex = "0";
-});
+// closeTwitter.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer.style.display = "none";
+//   tweetContainer.style.zIndex = "0";
+// });
 
-var showTweetButton2 = document.getElementById("twitter-2");
-var tweetContainer2 = document.getElementById("twitter-container-2");
-var closeTwitter2 = tweetContainer2.querySelector(".twitter-close-2");
+// var showTweetButton2 = document.getElementById("twitter-2");
+// var tweetContainer2 = document.getElementById("twitter-container-2");
+// var closeTwitter2 = tweetContainer2.querySelector(".twitter-close-2");
 
-showTweetButton2.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer2);
-  tweetContainer2.style.display = "block";
-  tweetContainer2.style.zIndex = "100000000";
-});
+// showTweetButton2.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer2);
+//   tweetContainer2.style.display = "block";
+//   tweetContainer2.style.zIndex = "100000000";
+// });
 
-closeTwitter2.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer2.style.display = "none";
-  tweetContainer2.style.zIndex = "0";
-});
+// closeTwitter2.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer2.style.display = "none";
+//   tweetContainer2.style.zIndex = "0";
+// });
 
-var showTweetButton3 = document.getElementById("twitter-3");
-var tweetContainer3 = document.getElementById("twitter-container-3");
-var closeTwitter3 = tweetContainer3.querySelector(".twitter-close-3");
+// var showTweetButton3 = document.getElementById("twitter-3");
+// var tweetContainer3 = document.getElementById("twitter-container-3");
+// var closeTwitter3 = tweetContainer3.querySelector(".twitter-close-3");
 
-showTweetButton3.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer3);
-  tweetContainer3.style.display = "block";
-  tweetContainer3.style.zIndex = "100000000";
-});
+// showTweetButton3.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer3);
+//   tweetContainer3.style.display = "block";
+//   tweetContainer3.style.zIndex = "100000000";
+// });
 
-closeTwitter3.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer3.style.display = "none";
-  tweetContainer3.style.zIndex = "0";
-});
+// closeTwitter3.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer3.style.display = "none";
+//   tweetContainer3.style.zIndex = "0";
+// });
 
-var showTweetButton4 = document.getElementById("twitter-4");
-var tweetContainer4 = document.getElementById("twitter-container-4");
-var closeTwitter4 = tweetContainer4.querySelector(".twitter-close-4");
+// var showTweetButton4 = document.getElementById("twitter-4");
+// var tweetContainer4 = document.getElementById("twitter-container-4");
+// var closeTwitter4 = tweetContainer4.querySelector(".twitter-close-4");
 
-showTweetButton4.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer4);
-  tweetContainer4.style.display = "block";
-  tweetContainer4.style.zIndex = "100000000";
-});
+// showTweetButton4.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer4);
+//   tweetContainer4.style.display = "block";
+//   tweetContainer4.style.zIndex = "100000000";
+// });
 
-closeTwitter4.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer4.style.display = "none";
-  tweetContainer4.style.zIndex = "0";
-});
-
-
-var showTweetButton5 = document.getElementById("twitter-5");
-var tweetContainer5 = document.getElementById("twitter-container-5");
-var closeTwitter5 = tweetContainer5.querySelector(".twitter-close-5");
-
-showTweetButton5.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer5);
-  tweetContainer5.style.display = "block";
-  tweetContainer5.style.zIndex = "100000000";
-});
-
-closeTwitter5.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer5.style.display = "none";
-  tweetContainer5.style.zIndex = "0";
-});
+// closeTwitter4.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer4.style.display = "none";
+//   tweetContainer4.style.zIndex = "0";
+// });
 
 
-var showTweetButton6 = document.getElementById("twitter-6");
-var tweetContainer6 = document.getElementById("twitter-container-6");
-var closeTwitter6 = tweetContainer6.querySelector(".twitter-close-6");
+// var showTweetButton5 = document.getElementById("twitter-5");
+// var tweetContainer5 = document.getElementById("twitter-container-5");
+// var closeTwitter5 = tweetContainer5.querySelector(".twitter-close-5");
 
-showTweetButton6.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer6);
-  tweetContainer6.style.display = "block";
-  tweetContainer6.style.zIndex = "100000000";
-});
+// showTweetButton5.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer5);
+//   tweetContainer5.style.display = "block";
+//   tweetContainer5.style.zIndex = "100000000";
+// });
 
-closeTwitter6.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer6.style.display = "none";
-  tweetContainer6.style.zIndex = "0";
-});
-
-var showTweetButton7 = document.getElementById("twitter-7");
-var tweetContainer7 = document.getElementById("twitter-container-7");
-var closeTwitter7 = tweetContainer7.querySelector(".twitter-close-7");
-
-showTweetButton7.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer7);
-  tweetContainer7.style.display = "block";
-  tweetContainer7.style.zIndex = "100000000";
-});
-
-closeTwitter7.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer7.style.display = "none";
-  tweetContainer7.style.zIndex = "0";
-});
+// closeTwitter5.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer5.style.display = "none";
+//   tweetContainer5.style.zIndex = "0";
+// });
 
 
-var showTweetButton8 = document.getElementById("twitter-8");
-var tweetContainer8 = document.getElementById("twitter-container-8");
-var closeTwitter8 = tweetContainer8.querySelector(".twitter-close-8");
+// var showTweetButton6 = document.getElementById("twitter-6");
+// var tweetContainer6 = document.getElementById("twitter-container-6");
+// var closeTwitter6 = tweetContainer6.querySelector(".twitter-close-6");
 
-showTweetButton8.addEventListener("click", function() {
-  document.body.appendChild(tweetContainer8);
-  tweetContainer8.style.display = "block";
-  tweetContainer8.style.zIndex = "100000000";
-});
+// showTweetButton6.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer6);
+//   tweetContainer6.style.display = "block";
+//   tweetContainer6.style.zIndex = "100000000";
+// });
 
-closeTwitter8.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  tweetContainer8.style.display = "none";
-  tweetContainer8.style.zIndex = "0";
-});
+// closeTwitter6.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer6.style.display = "none";
+//   tweetContainer6.style.zIndex = "0";
+// });
+
+// var showTweetButton7 = document.getElementById("twitter-7");
+// var tweetContainer7 = document.getElementById("twitter-container-7");
+// var closeTwitter7 = tweetContainer7.querySelector(".twitter-close-7");
+
+// showTweetButton7.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer7);
+//   tweetContainer7.style.display = "block";
+//   tweetContainer7.style.zIndex = "100000000";
+// });
+
+// closeTwitter7.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer7.style.display = "none";
+//   tweetContainer7.style.zIndex = "0";
+// });
+
+
+// var showTweetButton8 = document.getElementById("twitter-8");
+// var tweetContainer8 = document.getElementById("twitter-container-8");
+// var closeTwitter8 = tweetContainer8.querySelector(".twitter-close-8");
+
+// showTweetButton8.addEventListener("click", function() {
+//   document.body.appendChild(tweetContainer8);
+//   tweetContainer8.style.display = "block";
+//   tweetContainer8.style.zIndex = "100000000";
+// });
+
+// closeTwitter8.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   tweetContainer8.style.display = "none";
+//   tweetContainer8.style.zIndex = "0";
+// });
 
 
 var showTweetButton9 = document.getElementById("twitter-9");
@@ -704,136 +704,136 @@ closeTwitter9.addEventListener("click", function() {
 
 
 
-var showLinkedinButton = document.getElementById("linkedin-1");
-var linkedinContainer = document.getElementById("linkedin-container-1");
-var closeLinkedin = linkedinContainer.querySelector(".linkedin-close-1");
+// var showLinkedinButton = document.getElementById("linkedin-1");
+// var linkedinContainer = document.getElementById("linkedin-container-1");
+// var closeLinkedin = linkedinContainer.querySelector(".linkedin-close-1");
 
-showLinkedinButton.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer);
-  linkedinContainer.style.display = "block";
-  linkedinContainer.style.zIndex = "100000000";
-});
+// showLinkedinButton.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer);
+//   linkedinContainer.style.display = "block";
+//   linkedinContainer.style.zIndex = "100000000";
+// });
 
-closeLinkedin.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer.style.display = "none";
-  linkedinContainer.style.zIndex = "0";
-});
+// closeLinkedin.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer.style.display = "none";
+//   linkedinContainer.style.zIndex = "0";
+// });
 
-var showLinkedinButton2 = document.getElementById("linkedin-2");
-var linkedinContainer2 = document.getElementById("linkedin-container-2");
-var closeLinkedin2 = linkedinContainer2.querySelector(".linkedin-close-2");
+// var showLinkedinButton2 = document.getElementById("linkedin-2");
+// var linkedinContainer2 = document.getElementById("linkedin-container-2");
+// var closeLinkedin2 = linkedinContainer2.querySelector(".linkedin-close-2");
 
-showLinkedinButton2.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer2);
-  linkedinContainer2.style.display = "block";
-  linkedinContainer2.style.zIndex = "100000000";
-});
+// showLinkedinButton2.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer2);
+//   linkedinContainer2.style.display = "block";
+//   linkedinContainer2.style.zIndex = "100000000";
+// });
 
-closeLinkedin2.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer2.style.display = "none";
-  linkedinContainer2.style.zIndex = "0";
-});
-
-
-var showLinkedinButton3 = document.getElementById("linkedin-3");
-var linkedinContainer3 = document.getElementById("linkedin-container-3");
-var closeLinkedin3 = linkedinContainer3.querySelector(".linkedin-close-3");
-
-showLinkedinButton3.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer3);
-  linkedinContainer3.style.display = "block";
-  linkedinContainer3.style.zIndex = "100000000";
-});
-
-closeLinkedin3.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer3.style.display = "none";
-  linkedinContainer3.style.zIndex = "0";
-});
-
-var showLinkedinButton4 = document.getElementById("linkedin-4");
-var linkedinContainer4 = document.getElementById("linkedin-container-4");
-var closeLinkedin4 = linkedinContainer4.querySelector(".linkedin-close-4");
-
-showLinkedinButton4.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer4);
-  linkedinContainer4.style.display = "block";
-  linkedinContainer4.style.zIndex = "100000000";
-});
-
-closeLinkedin4.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer4.style.display = "none";
-  linkedinContainer4.style.zIndex = "0";
-});
-
-var showLinkedinButton5 = document.getElementById("linkedin-5");
-var linkedinContainer5 = document.getElementById("linkedin-container-5");
-var closeLinkedin5 = linkedinContainer5.querySelector(".linkedin-close-5");
-
-showLinkedinButton5.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer5);
-  linkedinContainer5.style.display = "block";
-  linkedinContainer5.style.zIndex = "100000000";
-});
-
-closeLinkedin5.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer5.style.display = "none";
-  linkedinContainer5.style.zIndex = "0";
-});
-
-var showLinkedinButton6 = document.getElementById("linkedin-6");
-var linkedinContainer6 = document.getElementById("linkedin-container-6");
-var closeLinkedin6 = linkedinContainer6.querySelector(".linkedin-close-6");
-
-showLinkedinButton6.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer6);
-  linkedinContainer6.style.display = "block";
-  linkedinContainer6.style.zIndex = "100000000";
-});
-
-closeLinkedin6.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer6.style.display = "none";
-  linkedinContainer6.style.zIndex = "0";
-});
-
-var showLinkedinButton7 = document.getElementById("linkedin-7");
-var linkedinContainer7 = document.getElementById("linkedin-container-7");
-var closeLinkedin7 = linkedinContainer7.querySelector(".linkedin-close-7");
-
-showLinkedinButton7.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer7);
-  linkedinContainer7.style.display = "block";
-  linkedinContainer7.style.zIndex = "100000000";
-});
-
-closeLinkedin7.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer7.style.display = "none";
-  linkedinContainer7.style.zIndex = "0";
-});
+// closeLinkedin2.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer2.style.display = "none";
+//   linkedinContainer2.style.zIndex = "0";
+// });
 
 
+// var showLinkedinButton3 = document.getElementById("linkedin-3");
+// var linkedinContainer3 = document.getElementById("linkedin-container-3");
+// var closeLinkedin3 = linkedinContainer3.querySelector(".linkedin-close-3");
 
-var showLinkedinButton8 = document.getElementById("linkedin-8");
-var linkedinContainer8 = document.getElementById("linkedin-container-8");
-var closeLinkedin8 = linkedinContainer8.querySelector(".linkedin-close-8");
+// showLinkedinButton3.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer3);
+//   linkedinContainer3.style.display = "block";
+//   linkedinContainer3.style.zIndex = "100000000";
+// });
 
-showLinkedinButton8.addEventListener("click", function() {
-  document.body.appendChild(linkedinContainer8);
-  linkedinContainer8.style.display = "block";
-  linkedinContainer8.style.zIndex = "100000000";
-});
+// closeLinkedin3.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer3.style.display = "none";
+//   linkedinContainer3.style.zIndex = "0";
+// });
 
-closeLinkedin8.addEventListener("click", function() {
-  // Hide the popup container and set its z-index back to 0
-  linkedinContainer8.style.display = "none";
-  linkedinContainer8.style.zIndex = "0";
-});
+// var showLinkedinButton4 = document.getElementById("linkedin-4");
+// var linkedinContainer4 = document.getElementById("linkedin-container-4");
+// var closeLinkedin4 = linkedinContainer4.querySelector(".linkedin-close-4");
+
+// showLinkedinButton4.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer4);
+//   linkedinContainer4.style.display = "block";
+//   linkedinContainer4.style.zIndex = "100000000";
+// });
+
+// closeLinkedin4.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer4.style.display = "none";
+//   linkedinContainer4.style.zIndex = "0";
+// });
+
+// var showLinkedinButton5 = document.getElementById("linkedin-5");
+// var linkedinContainer5 = document.getElementById("linkedin-container-5");
+// var closeLinkedin5 = linkedinContainer5.querySelector(".linkedin-close-5");
+
+// showLinkedinButton5.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer5);
+//   linkedinContainer5.style.display = "block";
+//   linkedinContainer5.style.zIndex = "100000000";
+// });
+
+// closeLinkedin5.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer5.style.display = "none";
+//   linkedinContainer5.style.zIndex = "0";
+// });
+
+// var showLinkedinButton6 = document.getElementById("linkedin-6");
+// var linkedinContainer6 = document.getElementById("linkedin-container-6");
+// var closeLinkedin6 = linkedinContainer6.querySelector(".linkedin-close-6");
+
+// showLinkedinButton6.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer6);
+//   linkedinContainer6.style.display = "block";
+//   linkedinContainer6.style.zIndex = "100000000";
+// });
+
+// closeLinkedin6.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer6.style.display = "none";
+//   linkedinContainer6.style.zIndex = "0";
+// });
+
+// var showLinkedinButton7 = document.getElementById("linkedin-7");
+// var linkedinContainer7 = document.getElementById("linkedin-container-7");
+// var closeLinkedin7 = linkedinContainer7.querySelector(".linkedin-close-7");
+
+// showLinkedinButton7.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer7);
+//   linkedinContainer7.style.display = "block";
+//   linkedinContainer7.style.zIndex = "100000000";
+// });
+
+// closeLinkedin7.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer7.style.display = "none";
+//   linkedinContainer7.style.zIndex = "0";
+// });
+
+
+
+// var showLinkedinButton8 = document.getElementById("linkedin-8");
+// var linkedinContainer8 = document.getElementById("linkedin-container-8");
+// var closeLinkedin8 = linkedinContainer8.querySelector(".linkedin-close-8");
+
+// showLinkedinButton8.addEventListener("click", function() {
+//   document.body.appendChild(linkedinContainer8);
+//   linkedinContainer8.style.display = "block";
+//   linkedinContainer8.style.zIndex = "100000000";
+// });
+
+// closeLinkedin8.addEventListener("click", function() {
+//   // Hide the popup container and set its z-index back to 0
+//   linkedinContainer8.style.display = "none";
+//   linkedinContainer8.style.zIndex = "0";
+// });
 
 var showLinkedinButton9 = document.getElementById("linkedin-9");
 var linkedinContainer9 = document.getElementById("linkedin-container-9");
